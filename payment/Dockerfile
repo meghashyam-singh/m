@@ -6,7 +6,6 @@ RUN apk add --no-cache openssl-dev
 RUN apk add --no-cache gcc
 RUN apk add --no-cache python3-dev
 RUN apk add --no-cache uwsgi uwsgi-python3
-RUN apk add python-dev
 WORKDIR /app
 COPY requirements.txt .
 COPY . .
