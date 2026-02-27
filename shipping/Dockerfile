@@ -7,7 +7,7 @@ RUN mvn clean package
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 RUN addgroup -S roboshop
-RUN adduser -S roboshp -G roboshop
+RUN adduser -S roboshop -G roboshop
 COPY --from=builder /app/target/shipping-1.0.jar /app/shipping.jar
 RUN chown -R roboshop:roboshop /app
 ENV CART_ENDPOINT=cart-cont:8080 \
