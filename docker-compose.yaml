@@ -70,7 +70,7 @@ services:
     ports:
       - "5555:8080"
     networks:
-      - payment
+      - roboshop
 
   frontend:
     build: ./frontend
@@ -79,7 +79,7 @@ services:
     ports:
       - "8888:80"
     networks:
-      - frontend
+      - roboshop
 
 networks:
   roboshop:
